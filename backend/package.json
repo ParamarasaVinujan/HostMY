@@ -1,0 +1,38 @@
+{
+  "name": "managalshowroom",
+  "version": "1.0.0",
+  "description": "MERN Stack",
+  "license": "ISC",
+  "author": "Anujan",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "dev": "set NODE_ENV=development&&nodemon server.js",
+    "proc": "set NODE_ENV=production&&nodemon server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^2.2.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "express-validator": "^7.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.1",
+    "multer": "^2.0.1",
+    "nodemailer": "^7.0.10",
+    "nodemon": "^3.1.10",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "validator": "^13.15.15"
+  },
+  "devDependencies": {
+    "eslint": "^9.38.0",
+    "eslint-plugin-react": "^7.37.5",
+    "prettier": "^3.6.2"
+  }
+}

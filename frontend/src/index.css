@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+.checkout-steps-container {
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.checkout-step-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.checkout-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 8px;
+  background-color: white;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #777;
+}
+
+/* ✅ Completed */
+.checkout-step.done .circle {
+  background-color: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+.checkout-step.done .label {
+  color: #28a745;
+}
+
+/* 🔘 Current */
+.checkout-step.current .circle {
+  border-color: #007bff;
+}
+
+.checkout-step.current .label {
+  color: #007bff;
+}
+
+/* ⚪ Upcoming */
+.checkout-step.upcoming .circle {
+  border-color: #ccc;
+}
+
+.checkout-step.upcoming .label {
+  color: #999;
+}
+
+/* Optional: Add connecting lines */
+.checkout-step-link::after {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  width: 120px;
+  height: 3px;
+  background-color: #ccc;
+  z-index: -1;
+}
+
+.checkout-step-link:last-child::after {
+  display: none;
+}
+
+.checkout-step.done~.checkout-step-link::after {
+  background-color: #28a745;
+}
+
+.sidebar a.text-white:hover {
+  color: #ffc107 !important;
+  /* golden yellow on hover */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.sidebar .dropdown-menu a:hover {
+  color: #212529 !important;
+  background-color: #ffc107 !important;
+}
+
+/* custom.css */
+.admin-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #343a40;
+  z-index: 1000;
+  overflow-y: auto;
+}
+.admin-main {
+  margin-left: 250px;
+  padding: 30px;
+}
+
+
+/* Hover animation for product cards */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional: image zoom inside card */
+.card-hover img {
+  transition: transform 0.3s ease;
+}
+
+.card-hover:hover img {
+  transform: scale(1.05);
+}
