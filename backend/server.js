@@ -8,22 +8,22 @@ dotenv.config();
 connectDB();
 
 // Render requires a fallback port
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 9000;
 
 const server = app.listen(PORT, () => {
-  console.log(`Working to port : ${PORT} in ${process.env.NODE_ENV}`);
+  console.log(`Server is running on PORT: ${PORT} in ${process.env.NODE_ENV}`);
 });
 
 // Handle Promise Rejections
 process.on('unhandledRejection', (err) => {
-  console.log(`Error : ${err.message}`);
-  console.log('Shutting down server due to unhandled promise rejection');
+  console.log(`Error: ${err.message}`);
+  console.log('Shutting down server due to Unhandled Promise Rejection');
   server.close(() => process.exit(1));
 });
 
 // Handle Sync Errors
 process.on('uncaughtException', (err) => {
-  console.log(`Error : ${err.message}`);
-  console.log('Shutting down server due to uncaught exception');
+  console.log(`Error: ${err.message}`);
+  console.log('Shutting down server due to Uncaught Exception');
   server.close(() => process.exit(1));
 });
