@@ -7,7 +7,7 @@
   "type": "commonjs",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "dev": "set NODE_ENV=development&&nodemon server.js",
     "proc": "set NODE_ENV=production&&nodemon server.js"
   },
